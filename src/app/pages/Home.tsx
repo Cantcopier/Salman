@@ -15,84 +15,14 @@ import {
 import { ServiceCard } from "../components/ServiceCard";
 import { SectionTitle } from "../components/SectionTitle";
 import { CTASection } from "../components/CTASection";
+import { metadata } from "../../data/metadata";
 
 export function Home() {
-  const services = [
-    {
-      icon: Wrench,
-      title: "Car Maintenance",
-      description:
-        "Regular maintenance to keep your vehicle running smoothly and efficiently.",
-      image:
-        "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljJTIwd29ya3Nob3B8ZW58MXx8fHwxNzc0MTE1ODQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      icon: Search,
-      title: "Diagnostics",
-      description:
-        "Advanced computer diagnostics to identify and resolve issues quickly.",
-      image:
-        "https://images.unsplash.com/photo-1737493698550-085d3cf55445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXIlMjBzY2FubmVyfGVufDF8fHx8MTc3NDExNTg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      icon: Droplets,
-      title: "Auto Detailing",
-      description:
-        "Professional detailing services to make your car look brand new.",
-      image:
-        "https://images.unsplash.com/photo-1761934657948-708146148588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXIlMjBkZXRhaWxpbmclMjBjbGVhbmluZ3xlbnwxfHx8fDE3NzQxMTU4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      icon: Gauge,
-      title: "Tire Service",
-      description:
-        "Complete tire services including replacement, rotation, and balancing.",
-      image:
-        "https://images.unsplash.com/photo-1764015805414-df7de89d405b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJlJTIwd2hlZWwlMjBzZXJ2aWNlJTIwY2hhbmdlfGVufDF8fHx8MTc3NDExNTg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-  ];
+  const { home } = metadata;
 
-  const features = [
-    {
-      icon: Users,
-      title: "Expert Technicians",
-      description: "Certified professionals with years of experience",
-    },
-    {
-      icon: Clock,
-      title: "Fast Service",
-      description: "Quick turnaround without compromising quality",
-    },
-    {
-      icon: Shield,
-      title: "Quality Guaranteed",
-      description: "100% satisfaction guarantee on all services",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "John Davis",
-      role: "Business Owner",
-      content:
-        "AutoPro has been servicing my fleet for 3 years. Their professionalism and attention to detail is unmatched.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Miller",
-      role: "Regular Customer",
-      content:
-        "Best auto service in town! They always explain everything clearly and the work is top-notch.",
-      rating: 5,
-    },
-    {
-      name: "Mike Johnson",
-      role: "Car Enthusiast",
-      content:
-        "I trust AutoPro with my luxury vehicles. They treat every car like it's their own.",
-      rating: 5,
-    },
-  ];
+  // Icon mapping for services
+  const serviceIcons = [Wrench, Search, Droplets, Gauge];
+  const featureIcons = [Users, Clock, Shield];
 
   return (
     <div className="min-h-screen">
@@ -101,7 +31,7 @@ export function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1760688962025-e56c8022daf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzcG9ydHMlMjBjYXIlMjBmcm9udCUyMHZpZXclMjBkYXJrfGVufDF8fHx8MTc3NDExNTg0Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+            src={home.hero.image}
             alt="Luxury car"
             className="w-full h-full object-cover"
           />
@@ -124,7 +54,7 @@ export function Home() {
             >
               <div className="h-px w-12 bg-red-600" />
               <span className="text-red-600 font-semibold tracking-wider uppercase">
-                Premium Auto Services
+                {home.hero.subtitle}
               </span>
             </motion.div>
 
@@ -134,9 +64,9 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-white text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              Your Car Deserves
+              {home.hero.title}
               <br />
-              <span className="text-red-600">Expert Care</span>
+              <span className="text-red-600">{home.hero.titleHighlight}</span>
             </motion.h1>
 
             <motion.p
@@ -145,8 +75,7 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-zinc-300 text-lg md:text-xl mb-8 leading-relaxed"
             >
-              Professional automotive maintenance and repair services you can
-              trust. We keep your vehicle running at peak performance.
+              {home.hero.description}
             </motion.p>
 
             <motion.div
@@ -155,19 +84,22 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
-                to="/services"
-                className="inline-flex items-center justify-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all hover:shadow-xl hover:shadow-red-600/20 group"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-zinc-900 px-8 py-4 rounded-lg font-semibold hover:bg-zinc-100 transition-all hover:shadow-xl"
-              >
-                Book Appointment
-              </Link>
+              {home.hero.buttons.map((button, index) => (
+                <Link
+                  key={index}
+                  to={button.link}
+                  className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all ${
+                    button.primary
+                      ? "bg-red-600 text-white hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/20"
+                      : "bg-white text-zinc-900 hover:bg-zinc-100 hover:shadow-xl"
+                  } group`}
+                >
+                  {button.text}
+                  {button.primary && (
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  )}
+                </Link>
+              ))}
             </motion.div>
           </motion.div>
         </div>
@@ -195,24 +127,31 @@ export function Home() {
       <section className="py-20 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            subtitle="What We Offer"
-            title="Our Premium Services"
-            description="From routine maintenance to specialized repairs, we provide comprehensive automotive services to keep your vehicle in top condition."
+            subtitle={home.servicesSection.subtitle}
+            title={home.servicesSection.title}
+            description={home.servicesSection.description}
             centered
           />
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} index={index} />
+            {home.services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                icon={serviceIcons[index]}
+                title={service.title}
+                description={service.description}
+                image={service.image}
+                index={index}
+              />
             ))}
           </div>
 
           <div className="mt-12 text-center">
             <Link
-              to="/services"
+              to={home.servicesSection.viewAllLink}
               className="inline-flex items-center gap-2 text-red-600 font-semibold hover:gap-3 transition-all group"
             >
-              View All Services
+              {home.servicesSection.viewAllText}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -230,19 +169,13 @@ export function Home() {
               transition={{ duration: 0.8 }}
             >
               <SectionTitle
-                subtitle="Why Choose Us"
-                title="Excellence in Automotive Care"
-                description="We combine expertise, quality, and customer service to deliver the best automotive experience."
+                subtitle={home.whyChooseUs.subtitle}
+                title={home.whyChooseUs.title}
+                description={home.whyChooseUs.description}
               />
 
               <div className="mt-8 space-y-4">
-                {[
-                  "Certified and experienced technicians",
-                  "State-of-the-art diagnostic equipment",
-                  "Transparent pricing with no hidden fees",
-                  "Quality parts and warranties",
-                  "Fast and efficient service",
-                ].map((item, index) => (
+                {home.whyChooseUs.benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -252,16 +185,16 @@ export function Home() {
                     className="flex items-center gap-3"
                   >
                     <CheckCircle2 className="w-6 h-6 text-red-600 shrink-0" />
-                    <span className="text-zinc-300">{item}</span>
+                    <span className="text-zinc-300">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
 
               <Link
-                to="/about"
+                to={home.whyChooseUs.ctaLink}
                 className="inline-flex items-center gap-2 mt-8 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all group"
               >
-                Learn More About Us
+                {home.whyChooseUs.ctaText}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -273,24 +206,29 @@ export function Home() {
               transition={{ duration: 0.8 }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-zinc-950 p-6 rounded-xl border border-zinc-800 hover:border-red-600/50 transition-all"
-                >
-                  <div className="bg-red-600/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-red-600" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm">{feature.description}</p>
-                </motion.div>
-              ))}
+              {home.features.map((feature, index) => {
+                const Icon = featureIcons[index];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-zinc-950 p-6 rounded-xl border border-zinc-800 hover:border-red-600/50 transition-all"
+                  >
+                    <div className="bg-red-600/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-red-600" />
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-zinc-400 text-sm">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </div>
         </div>
@@ -300,14 +238,14 @@ export function Home() {
       <section className="py-20 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            subtitle="Testimonials"
-            title="What Our Clients Say"
-            description="Don't just take our word for it - hear from our satisfied customers."
+            subtitle={home.testimonials.subtitle}
+            title={home.testimonials.title}
+            description={home.testimonials.description}
             centered
           />
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {home.testimonials.items.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,9 +277,10 @@ export function Home() {
 
       {/* CTA Section */}
       <CTASection
-        title="Ready to Get Started?"
-        description="Book your appointment today and experience the AutoPro difference. Your car deserves the best care."
-        buttonText="Book Appointment Now"
+        title={home.cta.title}
+        description={home.cta.description}
+        buttonText={home.cta.buttonText}
+        buttonLink={home.cta.buttonLink}
       />
     </div>
   );

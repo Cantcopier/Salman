@@ -2,8 +2,11 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
+import { metadata } from "../../data/metadata";
 
 export function Contact() {
+  const { contact } = metadata;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -47,32 +50,13 @@ export function Contact() {
     });
   };
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      details: "(555) 123-4567",
-      subdetails: "Mon-Fri: 8AM - 6PM",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: "info@autopro.com",
-      subdetails: "We'll respond within 24 hours",
-    },
-    {
-      icon: MapPin,
-      title: "Address",
-      details: "123 Auto Street",
-      subdetails: "Car City, CC 12345",
-    },
-    {
-      icon: Clock,
-      title: "Hours",
-      details: "Mon-Fri: 8AM - 6PM",
-      subdetails: "Sat: 9AM - 4PM, Sun: Closed",
-    },
-  ];
+  // Icon mapping for contact info
+  const iconMap: Record<string, any> = {
+    phone: Phone,
+    email: Mail,
+    address: MapPin,
+    hours: Clock,
+  };
 
   return (
     <div className="min-h-screen pt-20">
@@ -87,9 +71,9 @@ export function Contact() {
             className="text-center"
           >
             <SectionTitle
-              subtitle="Contact Us"
-              title="Get in Touch"
-              description="Have questions or ready to book your service? We're here to help. Reach out to us and we'll get back to you as soon as possible."
+              subtitle={contact.hero.subtitle}
+              title={contact.hero.title}
+              description={contact.hero.description}
               centered
             />
           </motion.div>
@@ -100,22 +84,27 @@ export function Contact() {
       <section className="py-12 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-red-600/50 transition-all group"
-              >
-                <div className="bg-red-600/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-colors">
-                  <info.icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">{info.title}</h3>
-                <p className="text-zinc-300 text-sm mb-1">{info.details}</p>
-                <p className="text-zinc-500 text-xs">{info.subdetails}</p>
-              </motion.div>
-            ))}
+            {contact.info.map((info, index) => {
+              const Icon = iconMap[info.type];
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-red-600/50 transition-all group"
+                >
+                  <div className="bg-red-600/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-600 transition-colors">
+                    <Icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">
+                    {info.title}
+                  </h3>
+                  <p className="text-zinc-300 text-sm mb-1">{info.details}</p>
+                  <p className="text-zinc-500 text-xs">{info.subdetails}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -133,7 +122,7 @@ export function Contact() {
             >
               <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800">
                 <h3 className="text-white text-2xl font-bold mb-6">
-                  Send us a Message
+                  {contact.form.title}
                 </h3>
 
                 {submitSuccess && (
@@ -142,14 +131,15 @@ export function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     className="bg-green-600/10 border border-green-600/50 text-green-600 p-4 rounded-lg mb-6"
                   >
-                    Thank you! We'll get back to you soon.
+                    {contact.form.successMessage}
                   </motion.div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-zinc-300 mb-2">
-                      Full Name *
+                      {contact.form.fields.name.label}{" "}
+                      {contact.form.fields.name.required && "*"}
                     </label>
                     <input
                       type="text"
@@ -157,9 +147,9 @@ export function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
+                      required={contact.form.fields.name.required}
                       className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:border-red-600 focus:outline-none transition-colors"
-                      placeholder="John Doe"
+                      placeholder={contact.form.fields.name.placeholder}
                     />
                   </div>
 
@@ -169,7 +159,8 @@ export function Contact() {
                         htmlFor="email"
                         className="block text-zinc-300 mb-2"
                       >
-                        Email *
+                        {contact.form.fields.email.label}{" "}
+                        {contact.form.fields.email.required && "*"}
                       </label>
                       <input
                         type="email"
@@ -177,9 +168,9 @@ export function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
+                        required={contact.form.fields.email.required}
                         className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:border-red-600 focus:outline-none transition-colors"
-                        placeholder="john@example.com"
+                        placeholder={contact.form.fields.email.placeholder}
                       />
                     </div>
 
@@ -188,7 +179,7 @@ export function Contact() {
                         htmlFor="phone"
                         className="block text-zinc-300 mb-2"
                       >
-                        Phone
+                        {contact.form.fields.phone.label}
                       </label>
                       <input
                         type="tel"
@@ -197,7 +188,7 @@ export function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:border-red-600 focus:outline-none transition-colors"
-                        placeholder="(555) 123-4567"
+                        placeholder={contact.form.fields.phone.placeholder}
                       />
                     </div>
                   </div>
@@ -207,7 +198,7 @@ export function Contact() {
                       htmlFor="service"
                       className="block text-zinc-300 mb-2"
                     >
-                      Service Interested In
+                      {contact.form.fields.service.label}
                     </label>
                     <select
                       id="service"
@@ -216,16 +207,13 @@ export function Contact() {
                       onChange={handleChange}
                       className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-white focus:border-red-600 focus:outline-none transition-colors"
                     >
-                      <option value="">Select a service</option>
-                      <option value="maintenance">General Maintenance</option>
-                      <option value="diagnostics">Computer Diagnostics</option>
-                      <option value="detailing">Auto Detailing</option>
-                      <option value="tires">Tire Service</option>
-                      <option value="battery">Battery Service</option>
-                      <option value="ac">AC & Heating</option>
-                      <option value="transmission">Transmission Service</option>
-                      <option value="engine">Engine Repair</option>
-                      <option value="other">Other</option>
+                      {contact.form.fields.service.options?.map(
+                        (option, index) => (
+                          <option key={index} value={option.value}>
+                            {option.label}
+                          </option>
+                        )
+                      )}
                     </select>
                   </div>
 
@@ -234,17 +222,18 @@ export function Contact() {
                       htmlFor="message"
                       className="block text-zinc-300 mb-2"
                     >
-                      Message *
+                      {contact.form.fields.message.label}{" "}
+                      {contact.form.fields.message.required && "*"}
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required
+                      required={contact.form.fields.message.required}
                       rows={5}
                       className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:border-red-600 focus:outline-none transition-colors resize-none"
-                      placeholder="Tell us about your vehicle and what service you need..."
+                      placeholder={contact.form.fields.message.placeholder}
                     />
                   </div>
 
@@ -256,11 +245,11 @@ export function Contact() {
                     {isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        Sending...
+                        {contact.form.submittingButton}
                       </>
                     ) : (
                       <>
-                        Send Message
+                        {contact.form.submitButton}
                         <Send className="w-5 h-5" />
                       </>
                     )}
@@ -284,23 +273,20 @@ export function Contact() {
                     <MapPin className="w-16 h-16 text-red-600 mx-auto mb-4" />
                     <p className="text-zinc-400">Map Location</p>
                     <p className="text-zinc-500 text-sm mt-2">
-                      123 Auto Street, Car City, CC 12345
+                      {metadata.footer.contact.address}
                     </p>
                   </div>
                 </div>
-                {/* You can integrate Google Maps or similar here */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 to-zinc-950/50 backdrop-blur-sm" />
               </div>
 
               {/* Additional Contact Info */}
               <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800">
                 <h3 className="text-white text-xl font-bold mb-4">
-                  Visit Our Facility
+                  {contact.visitInfo.title}
                 </h3>
                 <p className="text-zinc-400 leading-relaxed mb-6">
-                  Stop by our modern facility for a tour or to speak with our
-                  team. We have a comfortable waiting area with complimentary
-                  WiFi and refreshments.
+                  {contact.visitInfo.description}
                 </p>
 
                 <div className="space-y-4">
@@ -308,15 +294,13 @@ export function Contact() {
                     <Clock className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
                     <div>
                       <p className="text-white font-semibold mb-1">
-                        Business Hours
+                        {contact.businessHours.title}
                       </p>
-                      <p className="text-zinc-400 text-sm">
-                        Monday - Friday: 8:00 AM - 6:00 PM
-                      </p>
-                      <p className="text-zinc-400 text-sm">
-                        Saturday: 9:00 AM - 4:00 PM
-                      </p>
-                      <p className="text-zinc-400 text-sm">Sunday: Closed</p>
+                      {contact.businessHours.schedule.map((item, index) => (
+                        <p key={index} className="text-zinc-400 text-sm">
+                          {item.days}: {item.hours}
+                        </p>
+                      ))}
                     </div>
                   </div>
 
@@ -324,11 +308,10 @@ export function Contact() {
                     <Phone className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
                     <div>
                       <p className="text-white font-semibold mb-1">
-                        24/7 Emergency Service
+                        {contact.emergency.title}
                       </p>
                       <p className="text-zinc-400 text-sm">
-                        For urgent roadside assistance, call our emergency line
-                        at (555) 999-8888
+                        {contact.emergency.description}
                       </p>
                     </div>
                   </div>
@@ -343,34 +326,13 @@ export function Contact() {
       <section className="py-20 bg-zinc-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            subtitle="FAQ"
-            title="Frequently Asked Questions"
+            subtitle={contact.faq.subtitle}
+            title={contact.faq.title}
             centered
           />
 
           <div className="mt-12 space-y-4">
-            {[
-              {
-                question: "Do I need an appointment?",
-                answer:
-                  "While walk-ins are welcome, we recommend scheduling an appointment to minimize wait times and ensure we have the right technician available for your needs.",
-              },
-              {
-                question: "What forms of payment do you accept?",
-                answer:
-                  "We accept all major credit cards, debit cards, cash, and checks. We also offer financing options for larger repairs.",
-              },
-              {
-                question: "Do you offer warranties?",
-                answer:
-                  "Yes! We provide a 12-month/12,000-mile warranty on labor and parts warranty based on manufacturer specifications.",
-              },
-              {
-                question: "How long will my service take?",
-                answer:
-                  "Service times vary depending on the work needed. We'll provide an estimated completion time when you drop off your vehicle. For longer jobs, we offer loaner vehicles.",
-              },
-            ].map((faq, index) => (
+            {contact.faq.items.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

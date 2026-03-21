@@ -8,9 +8,10 @@ import {
   MapPin,
   Wrench,
 } from "lucide-react";
+import { metadata } from "../../data/metadata";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const { site, footer } = metadata;
 
   return (
     <footer className="bg-zinc-950 border-t border-zinc-800">
@@ -23,33 +24,32 @@ export function Footer() {
                 <Wrench className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-bold text-lg">AutoPro</span>
+                <span className="text-white font-bold text-lg">
+                  {footer.company.name}
+                </span>
                 <span className="text-red-600 text-xs font-medium tracking-wider">
-                  SERVICES
+                  {footer.company.tagline}
                 </span>
               </div>
             </div>
-            <p className="text-zinc-400 mb-4">
-              Your trusted partner for professional automotive care and
-              maintenance services.
-            </p>
+            <p className="text-zinc-400 mb-4">{footer.company.description}</p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href={footer.social.facebook}
                 className="bg-zinc-800 p-2.5 rounded-lg text-zinc-400 hover:bg-red-600 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href={footer.social.instagram}
                 className="bg-zinc-800 p-2.5 rounded-lg text-zinc-400 hover:bg-red-600 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href={footer.social.twitter}
                 className="bg-zinc-800 p-2.5 rounded-lg text-zinc-400 hover:bg-red-600 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
@@ -60,80 +60,54 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">
+              {footer.quickLinks.title}
+            </h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  className="text-zinc-400 hover:text-red-600 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-zinc-400 hover:text-red-600 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-zinc-400 hover:text-red-600 transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-zinc-400 hover:text-red-600 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+              {footer.quickLinks.links.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-zinc-400 hover:text-red-600 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Our Services</h3>
+            <h3 className="text-white font-semibold mb-4">
+              {footer.services.title}
+            </h3>
             <ul className="space-y-2">
-              <li>
-                <span className="text-zinc-400">Car Maintenance</span>
-              </li>
-              <li>
-                <span className="text-zinc-400">Diagnostics</span>
-              </li>
-              <li>
-                <span className="text-zinc-400">Auto Repair</span>
-              </li>
-              <li>
-                <span className="text-zinc-400">Detailing</span>
-              </li>
-              <li>
-                <span className="text-zinc-400">Tire Service</span>
-              </li>
+              {footer.services.items.map((service, index) => (
+                <li key={index}>
+                  <span className="text-zinc-400">{service}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold mb-4">
+              {footer.contact.title}
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-zinc-400">
                 <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                <span>123 Auto Street, Car City, CC 12345</span>
+                <span>{footer.contact.address}</span>
               </li>
               <li className="flex items-center gap-3 text-zinc-400">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
-                <span>(555) 123-4567</span>
+                <span>{footer.contact.phone}</span>
               </li>
               <li className="flex items-center gap-3 text-zinc-400">
                 <Mail className="w-5 h-5 text-red-600 shrink-0" />
-                <span>info@autopro.com</span>
+                <span>{footer.contact.email}</span>
               </li>
             </ul>
           </div>
@@ -143,21 +117,18 @@ export function Footer() {
         <div className="pt-8 border-t border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-zinc-400 text-sm">
-              © {currentYear} AutoPro Services. All rights reserved.
+              © {site.year} {footer.legal.copyright}
             </p>
             <div className="flex gap-6">
-              <a
-                href="#"
-                className="text-zinc-400 hover:text-red-600 text-sm transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-zinc-400 hover:text-red-600 text-sm transition-colors"
-              >
-                Terms of Service
-              </a>
+              {footer.legal.links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  className="text-zinc-400 hover:text-red-600 text-sm transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, Wrench } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { metadata } from "../../data/metadata";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,12 +23,7 @@ export function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
-  ];
+  const { site, navbar } = metadata;
 
   const isActive = (path: string) => {
     if (path === "/" && location.pathname === "/") return true;
@@ -52,17 +48,17 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-white font-bold text-xl tracking-tight">
-                AutoPro
+                {site.name}
               </span>
               <span className="text-red-600 text-xs font-medium tracking-wider">
-                SERVICES
+                {site.tagline}
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navbar.links.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -83,10 +79,10 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              to="/contact"
+              to={navbar.ctaButton.link}
               className="bg-red-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-red-700 transition-all hover:shadow-lg hover:shadow-red-600/20"
             >
-              Book Now
+              {navbar.ctaButton.text}
             </Link>
           </div>
 
@@ -115,7 +111,7 @@ export function Navbar() {
             className="md:hidden bg-zinc-900 border-t border-zinc-800"
           >
             <div className="px-4 py-6 space-y-3">
-              {navLinks.map((link) => (
+              {navbar.links.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -129,10 +125,10 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to={navbar.ctaButton.link}
                 className="block bg-red-600 text-white px-4 py-3 rounded-lg font-medium text-center hover:bg-red-700 transition-colors"
               >
-                Book Now
+                {navbar.ctaButton.text}
               </Link>
             </div>
           </motion.div>
