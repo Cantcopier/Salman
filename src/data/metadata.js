@@ -10,7 +10,7 @@ export const metadata = {
   // SITE INFO
   // ========================================
   site: {
-    name: "Salman Auto",
+    name: "Salum ",
     tagline: "SERVICES",
     fullName: "AutoPro Services",
     description: "Your trusted partner for professional automotive care and maintenance services.",
@@ -20,18 +20,18 @@ export const metadata = {
   // ========================================
   // NAVBAR
   // ========================================
-  navbar: {
-    links: [
-      { name: "Home", path: "/" },
-      { name: "About", path: "/about" },
-      { name: "Services", path: "/services" },
-      { name: "Contact", path: "/contact" },
-    ],
-    ctaButton: {
-      text: "Book Now",
-      link: "/contact",
-    },
+navbar: {
+  links: [
+    { name: "Accueil", path: "/" },
+    { name: "À propos", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+  ],
+  ctaButton: {
+    text: "Réserver maintenant",
+    link: "/contact",
   },
+},
 
   // ========================================
   // HOME PAGE
@@ -380,7 +380,7 @@ contact: {
     {
       type: "phone",
       title: "Téléphone",
-      details: "(555) 123-4567",
+      details: "06 64 25 61 60",
       subdetails: "Lun-Ven : 8h - 18h",
     },
     {
@@ -485,7 +485,7 @@ contact: {
   // ========================================
 footer: {
   company: {
-    name: "AutoPro",
+    name: "Salum",
     tagline: "SERVICES",
     description: "Votre partenaire de confiance pour les services professionnels d'entretien et de maintenance automobile.",
   },
@@ -514,18 +514,18 @@ footer: {
   contact: {
     title: "Contactez-nous",
     address: "123 Auto Street, Car City, CC 12345",
-    phone: "(555) 123-4567",
-    email: "info@autopro.com",
+    phone: "+212 6 64 25 61 60",
+    email: "info@salum.com",
   },
 
   social: {
-    facebook: "#",
-    instagram: "#",
-    twitter: "#",
+    facebook: "https://www.facebook.com/profile.php?id=61572279195123&rdid=IMVeiqpfG6iJ5rvE&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GGzJcdUpX%2F#",
+    instagram: "https://www.instagram.com/autosalum?igsh=MXM0MzhjaHQwZTcyaA%3D%3D",
+    twitter: "https://api.whatsapp.com/send/?phone=212664256160&text&type=phone_number&app_absent=0",
   },
 
   legal: {
-    copyright: "AutoPro Services. Tous droits réservés.",
+    copyright: "Salum Services. Tous droits réservés.",
     links: [
       { name: "Politique de confidentialité", url: "#" },
       { name: "Conditions d'utilisation", url: "#" },
