@@ -10,7 +10,7 @@ export const metadata = {
   // SITE INFO
   // ========================================
   site: {
-    name: "Salum ",
+    name: "AutoPro",
     tagline: "SERVICES",
     fullName: "AutoPro Services",
     description: "Your trusted partner for professional automotive care and maintenance services.",
@@ -20,516 +20,516 @@ export const metadata = {
   // ========================================
   // NAVBAR
   // ========================================
-navbar: {
-  links: [
-    { name: "Accueil", path: "/" },
-    { name: "À propos", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
-  ],
-  ctaButton: {
-    text: "Réserver maintenant",
-    link: "/contact",
+  navbar: {
+    links: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Services", path: "/services" },
+      { name: "Contact", path: "/contact" },
+    ],
+    ctaButton: {
+      text: "Book Now",
+      link: "/contact",
+    },
   },
-},
 
   // ========================================
   // HOME PAGE
   // ========================================
-home: {
-  hero: {
-    subtitle: "Services automobiles premium",
-    title: "Votre voiture mérite",
-    titleHighlight: "un entretien expert",
-    description: "Des services professionnels d'entretien et de réparation automobile sur lesquels vous pouvez compter. Nous maintenons votre véhicule à des performances optimales.",
-    image: "https://images.unsplash.com/photo-1760688962025-e56c8022daf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzcG9ydHMlMjBjYXIlMjBmcm9udCUyMHZpZXclMjBkYXJrfGVufDF8fHx8MTc3NDExNTg0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    buttons: [
-      { text: "Explorer les services", link: "/services", primary: true },
-      { text: "Prendre rendez-vous", link: "/contact", primary: false },
-    ],
-  },
+  home: {
+    hero: {
+      subtitle: "Premium Auto Services",
+      title: "Your Car Deserves",
+      titleHighlight: "Expert Care",
+      description: "Professional automotive maintenance and repair services you can trust. We keep your vehicle running at peak performance.",
+      image: "https://images.unsplash.com/photo-1760688962025-e56c8022daf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzcG9ydHMlMjBjYXIlMjBmcm9udCUyMHZpZXclMjBkYXJrfGVufDF8fHx8MTc3NDExNTg0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      buttons: [
+        { text: "Explore Services", link: "/services", primary: true },
+        { text: "Book Appointment", link: "/contact", primary: false },
+      ],
+    },
 
-  servicesSection: {
-    subtitle: "Ce que nous proposons",
-    title: "Nos services premium",
-    description: "De l'entretien courant aux réparations spécialisées, nous proposons des services automobiles complets pour garder votre véhicule en parfait état.",
-    viewAllLink: "/services",
-    viewAllText: "Voir tous les services",
-  },
+    servicesSection: {
+      subtitle: "What We Offer",
+      title: "Our Premium Services",
+      description: "From routine maintenance to specialized repairs, we provide comprehensive automotive services to keep your vehicle in top condition.",
+      viewAllLink: "/services",
+      viewAllText: "View All Services",
+    },
 
-  services: [
-    {
-      title: "Entretien automobile",
-      description: "Un entretien régulier pour garantir le bon fonctionnement et l'efficacité de votre véhicule.",
-      image: "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljJTIwd29ya3Nob3B8ZW58MXx8fHwxNzc0MTE1ODQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Diagnostic",
-      description: "Des diagnostics informatiques avancés pour identifier et résoudre rapidement les problèmes.",
-      image: "https://images.unsplash.com/photo-1737493698550-085d3cf55445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXIlMjBzY2FubmVyfGVufDF8fHx8MTc3NDExNTg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Nettoyage automobile",
-      description: "Des services de detailing professionnels pour redonner à votre voiture un aspect neuf.",
-      image: "https://images.unsplash.com/photo-1761934657948-708146148588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXIlMjBkZXRhaWxpbmclMjBjbGVhbmluZ3xlbnwxfHx8fDE3NzQxMTU4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Service des pneus",
-      description: "Services complets pour les pneus, incluant le remplacement, la rotation et l'équilibrage.",
-      image: "https://images.unsplash.com/photo-1764015805414-df7de89d405b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJlJTIwd2hlZWwlMjBzZXJ2aWNlJTIwY2hhbmdlfGVufDF8fHx8MTc3NDExNTg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-  ],
-
-  whyChooseUs: {
-    subtitle: "Pourquoi nous choisir",
-    title: "L'excellence en entretien automobile",
-    description: "Nous combinons expertise, qualité et service client pour offrir la meilleure expérience automobile.",
-    benefits: [
-      "Techniciens certifiés et expérimentés",
-      "Équipements de diagnostic de pointe",
-      "Tarification transparente sans frais cachés",
-      "Pièces de qualité avec garantie",
-      "Service rapide et efficace",
-    ],
-    ctaText: "En savoir plus sur nous",
-    ctaLink: "/about",
-  },
-
-  features: [
-    {
-      title: "Techniciens experts",
-      description: "Des professionnels certifiés avec des années d'expérience",
-    },
-    {
-      title: "Service rapide",
-      description: "Un service rapide sans compromettre la qualité",
-    },
-    {
-      title: "Qualité garantie",
-      description: "Satisfaction garantie à 100% sur tous nos services",
-    },
-  ],
-
-  testimonials: {
-    subtitle: "Témoignages",
-    title: "Ce que disent nos clients",
-    description: "Ne vous fiez pas seulement à notre parole - découvrez les avis de nos clients satisfaits.",
-    items: [
+    services: [
       {
-        name: "John Davis",
-        role: "Chef d'entreprise",
-        content: "AutoPro entretient ma flotte depuis 3 ans. Leur professionnalisme et leur souci du détail sont incomparables.",
-        rating: 5,
+        title: "Car Maintenance",
+        description: "Regular maintenance to keep your vehicle running smoothly and efficiently.",
+        image: "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljJTIwd29ya3Nob3B8ZW58MXx8fHwxNzc0MTE1ODQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        name: "Sarah Miller",
-        role: "Cliente régulière",
-        content: "Le meilleur service automobile en ville ! Ils expliquent toujours tout clairement et le travail est impeccable.",
-        rating: 5,
+        title: "Diagnostics",
+        description: "Advanced computer diagnostics to identify and resolve issues quickly.",
+        image: "https://images.unsplash.com/photo-1737493698550-085d3cf55445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXIlMjBzY2FubmVyfGVufDF8fHx8MTc3NDExNTg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        name: "Mike Johnson",
-        role: "Passionné d'automobile",
-        content: "Je fais confiance à AutoPro pour mes véhicules de luxe. Ils traitent chaque voiture comme la leur.",
-        rating: 5,
+        title: "Auto Detailing",
+        description: "Professional detailing services to make your car look brand new.",
+        image: "https://images.unsplash.com/photo-1761934657948-708146148588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXIlMjBkZXRhaWxpbmclMjBjbGVhbmluZ3xlbnwxfHx8fDE3NzQxMTU4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      },
+      {
+        title: "Tire Service",
+        description: "Complete tire services including replacement, rotation, and balancing.",
+        image: "https://images.unsplash.com/photo-1764015805414-df7de89d405b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJlJTIwd2hlZWwlMjBzZXJ2aWNlJTIwY2hhbmdlfGVufDF8fHx8MTc3NDExNTg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       },
     ],
-  },
 
-  cta: {
-    title: "Prêt à commencer ?",
-    description: "Prenez rendez-vous dès aujourd'hui et découvrez la différence AutoPro. Votre voiture mérite le meilleur entretien.",
-    buttonText: "Prendre rendez-vous maintenant",
-    buttonLink: "/contact",
+    whyChooseUs: {
+      subtitle: "Why Choose Us",
+      title: "Excellence in Automotive Care",
+      description: "We combine expertise, quality, and customer service to deliver the best automotive experience.",
+      benefits: [
+        "Certified and experienced technicians",
+        "State-of-the-art diagnostic equipment",
+        "Transparent pricing with no hidden fees",
+        "Quality parts and warranties",
+        "Fast and efficient service",
+      ],
+      ctaText: "Learn More About Us",
+      ctaLink: "/about",
+    },
+
+    features: [
+      {
+        title: "Expert Technicians",
+        description: "Certified professionals with years of experience",
+      },
+      {
+        title: "Fast Service",
+        description: "Quick turnaround without compromising quality",
+      },
+      {
+        title: "Quality Guaranteed",
+        description: "100% satisfaction guarantee on all services",
+      },
+    ],
+
+    testimonials: {
+      subtitle: "Testimonials",
+      title: "What Our Clients Say",
+      description: "Don't just take our word for it - hear from our satisfied customers.",
+      items: [
+        {
+          name: "John Davis",
+          role: "Business Owner",
+          content: "AutoPro has been servicing my fleet for 3 years. Their professionalism and attention to detail is unmatched.",
+          rating: 5,
+        },
+        {
+          name: "Sarah Miller",
+          role: "Regular Customer",
+          content: "Best auto service in town! They always explain everything clearly and the work is top-notch.",
+          rating: 5,
+        },
+        {
+          name: "Mike Johnson",
+          role: "Car Enthusiast",
+          content: "I trust AutoPro with my luxury vehicles. They treat every car like it's their own.",
+          rating: 5,
+        },
+      ],
+    },
+
+    cta: {
+      title: "Ready to Get Started?",
+      description: "Book your appointment today and experience the AutoPro difference. Your car deserves the best care.",
+      buttonText: "Book Appointment Now",
+      buttonLink: "/contact",
+    },
   },
-},
 
   // ========================================
   // ABOUT PAGE
   // ========================================
-about: {
-  hero: {
-    subtitle: "À propos de nous",
-    title: "Leader dans l'excellence automobile",
-    description: "Depuis plus de 15 ans, AutoPro est le choix de confiance pour les services automobiles professionnels, alliant expertise, qualité et service client.",
-  },
+  about: {
+    hero: {
+      subtitle: "About Us",
+      title: "Leading the Way in Automotive Excellence",
+      description: "For over 15 years, AutoPro has been the trusted choice for professional automotive services, combining expertise, quality, and customer care.",
+    },
 
-  stats: [
-    { number: "15+", label: "Années d'expérience" },
-    { number: "10K+", label: "Clients satisfaits" },
-    { number: "50+", label: "Techniciens experts" },
-    { number: "98%", label: "Satisfaction client" },
-  ],
-
-  story: {
-    subtitle: "Notre histoire",
-    title: "Construit sur la passion et l'expertise",
-    description: "Ce qui a commencé comme un petit garage familial est devenu le centre de service automobile le plus fiable de la région.",
-    image: "https://images.unsplash.com/photo-1759655360665-13a456981d74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwdGVhbSUyMHByb2Zlc3Npb25hbHN8ZW58MXx8fHwxNzc0MTE1ODQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    paragraphs: [
-      "Fondé en 2010, AutoPro est né d'une mission simple : offrir des services automobiles honnêtes et de qualité sur lesquels les conducteurs peuvent réellement compter. Notre fondateur, mécanicien de troisième génération, a identifié le besoin d’un centre combinant technologie de pointe et savoir-faire traditionnel.",
-      "Aujourd’hui, nous avons grandi pour devenir une équipe de plus de 50 techniciens certifiés, sans jamais perdre de vue nos valeurs fondamentales. Chaque véhicule reçoit le même soin méticuleux et la même attention aux détails qui ont bâti notre réputation.",
-      "Nous investissons dans les derniers équipements de diagnostic et dans la formation continue de notre équipe, afin de pouvoir gérer aussi bien l’entretien courant que les réparations complexes sur toutes les marques et modèles.",
+    stats: [
+      { number: "15+", label: "Years Experience" },
+      { number: "10K+", label: "Happy Customers" },
+      { number: "50+", label: "Expert Technicians" },
+      { number: "98%", label: "Customer Satisfaction" },
     ],
-  },
 
-  mission: {
-    title: "Notre mission",
-    description: "Offrir des services automobiles exceptionnels qui dépassent les attentes des clients grâce à un savoir-faire expert, une communication transparente et un engagement constant envers la qualité. Nous visons à être le partenaire automobile de confiance de nos clients.",
-  },
+    story: {
+      subtitle: "Our Story",
+      title: "Built on Passion and Expertise",
+      description: "What started as a small family garage has grown into the region's most trusted automotive service center.",
+      image: "https://images.unsplash.com/photo-1759655360665-13a456981d74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwdGVhbSUyMHByb2Zlc3Npb25hbHN8ZW58MXx8fHwxNzc0MTE1ODQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      paragraphs: [
+        "Founded in 2010, AutoPro was born from a simple mission: to provide honest, quality automotive services that car owners can truly rely on. Our founder, a third-generation mechanic, saw the need for a service center that combined cutting-edge technology with old-school craftsmanship.",
+        "Today, we've grown to a team of over 50 certified technicians, but we've never lost sight of our core values. Every vehicle that comes through our doors receives the same meticulous care and attention to detail that built our reputation.",
+        "We invest in the latest diagnostic equipment and continuous training for our team, ensuring we can handle everything from routine maintenance to complex repairs on all makes and models.",
+      ],
+    },
 
-  vision: {
-    title: "Notre vision",
-    description: "Être reconnu comme le leader des services automobiles, en établissant des standards d'excellence, d'innovation et de service client. Nous imaginons un avenir où chaque conducteur a accès à un service honnête et professionnel.",
-  },
+    mission: {
+      title: "Our Mission",
+      description: "To provide exceptional automotive services that exceed customer expectations through expert craftsmanship, transparent communication, and unwavering commitment to quality. We strive to be the automotive partner our customers trust and recommend.",
+    },
 
-  values: [
-    {
-      title: "Qualité",
-      description: "Nous ne faisons aucun compromis sur la qualité. Chaque service respecte nos normes les plus élevées.",
+    vision: {
+      title: "Our Vision",
+      description: "To be recognized as the leading automotive service provider, setting industry standards for quality, innovation, and customer care. We envision a future where every car owner has access to honest, professional service they can depend on.",
     },
-    {
-      title: "Orientation client",
-      description: "Votre satisfaction est notre priorité. Nous écoutons et offrons un service personnalisé.",
-    },
-    {
-      title: "Excellence",
-      description: "Amélioration continue et savoir-faire expert dans tout ce que nous faisons.",
-    },
-    {
-      title: "Fiabilité",
-      description: "Un service fiable sur lequel vous pouvez compter, livré à temps, à chaque fois.",
-    },
-  ],
 
-  team: {
-    subtitle: "Notre équipe",
-    title: "Des techniciens experts de confiance",
-    description: "Notre équipe de professionnels certifiés apporte des décennies d'expérience combinée et une passion pour l'excellence automobile.",
-    image: "https://images.unsplash.com/photo-1765603729821-804d347a3680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYXIlMjBzaG93cm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc3Mzk5NDUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
-    highlights: [
+    values: [
       {
-        title: "Certifiés ASE",
-        description: "Tous nos techniciens sont certifiés ASE et formés régulièrement aux dernières technologies automobiles.",
+        title: "Quality",
+        description: "We never compromise on quality. Every service meets our highest standards.",
       },
       {
-        title: "Formation continue",
-        description: "Nous investissons dans la formation continue pour rester à la pointe des évolutions du secteur.",
+        title: "Customer Focus",
+        description: "Your satisfaction is our priority. We listen and deliver personalized service.",
+      },
+      {
+        title: "Excellence",
+        description: "Continuous improvement and expert craftsmanship in everything we do.",
+      },
+      {
+        title: "Reliability",
+        description: "Dependable service you can count on, delivered on time, every time.",
       },
     ],
-  },
 
-  cta: {
-    title: "Découvrez la différence AutoPro",
-    description: "Rejoignez des milliers de clients satisfaits qui nous font confiance. Planifiez votre service dès aujourd'hui.",
-    buttonText: "Nous contacter",
-    buttonLink: "/contact",
+    team: {
+      subtitle: "Our Team",
+      title: "Expert Technicians You Can Trust",
+      description: "Our team of certified professionals brings decades of combined experience and a passion for automotive excellence.",
+      image: "https://images.unsplash.com/photo-1765603729821-804d347a3680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYXIlMjBzaG93cm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc3Mzk5NDUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      highlights: [
+        {
+          title: "ASE Certified",
+          description: "All our technicians are ASE certified and regularly trained on the latest automotive technologies.",
+        },
+        {
+          title: "Continuous Training",
+          description: "We invest in ongoing education to stay ahead of industry developments and new vehicle technologies.",
+        },
+      ],
+    },
+
+    cta: {
+      title: "Experience the AutoPro Difference",
+      description: "Join thousands of satisfied customers who trust us with their vehicles. Schedule your service today.",
+      buttonText: "Get in Touch",
+      buttonLink: "/contact",
+    },
   },
-},
 
   // ========================================
   // SERVICES PAGE
   // ========================================
   services: {
-  hero: {
-    subtitle: "Nos services",
-    title: "Entretien automobile complet",
-    description: "De l'entretien courant aux réparations majeures, nous proposons des services automobiles complets pour maintenir votre véhicule à des performances optimales.",
-  },
+    hero: {
+      subtitle: "Our Services",
+      title: "Comprehensive Automotive Care",
+      description: "From routine maintenance to major repairs, we provide complete automotive services to keep your vehicle running at peak performance.",
+    },
 
-  mainServices: [
-    {
-      title: "Entretien général",
-      description: "Services d'entretien régulier incluant la vidange, la vérification des fluides, le remplacement des filtres et les inspections préventives pour assurer le bon fonctionnement de votre véhicule.",
-      image: "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljJTIwd29ya3Nob3B8ZW58MXx8fHwxNzc0MTE1ODQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Diagnostic informatique",
-      description: "Services de diagnostic avancés utilisant des équipements de pointe pour identifier et résoudre rapidement et précisément les problèmes du moteur, de la transmission et des systèmes électriques.",
-      image: "https://images.unsplash.com/photo-1737493698550-085d3cf55445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXIlMjBzY2FubmVyfGVufDF8fHx8MTc3NDExNTg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Nettoyage professionnel",
-      description: "Services complets de detailing intérieur et extérieur incluant lavage, cirage, polissage, nettoyage des sièges et protection de la peinture pour redonner à votre voiture un aspect neuf.",
-      image: "https://images.unsplash.com/photo-1761934657948-708146148588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXIlMjBkZXRhaWxpbmclMjBjbGVhbmluZ3xlbnwxfHx8fDE3NzQxMTU4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Services des pneus",
-      description: "Entretien complet des pneus incluant installation de pneus neufs, rotation, équilibrage, alignement et vérification de la pression. Nous proposons toutes les grandes marques.",
-      image: "https://images.unsplash.com/photo-1764015805414-df7de89d405b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJlJTIwd2hlZWwlMjBzZXJ2aWNlJTIwY2hhbmdlfGVufDF8fHx8MTc3NDExNTg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Service batterie",
-      description: "Test, remplacement de batterie et diagnostic du système électrique. Nous proposons des batteries premium avec garantie et installation professionnelle.",
-      image: "https://images.unsplash.com/photo-1767990495521-95cceb571125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBiYXR0ZXJ5JTIwZWxlY3RyaWNhbCUyMHNlcnZpY2V8ZW58MXx8fHwxNzc0MTE1ODQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      title: "Climatisation & chauffage",
-      description: "Réparation et entretien du système de climatisation incluant recharge de clim, réparation du chauffage et remplacement du filtre habitacle pour un confort optimal.",
-    },
-    {
-      title: "Service de transmission",
-      description: "Vidange de transmission, réparations et révisions complètes. Service expert pour transmissions automatiques et manuelles.",
-    },
-    {
-      title: "Réparation moteur",
-      description: "Diagnostic complet et réparation moteur, des réglages mineurs aux révisions majeures. Nous intervenons sur toutes les marques et modèles.",
-    },
-  ],
-
-  additionalServices: [
-    {
-      title: "Service de freinage",
-      description: "Inspection des freins, remplacement des plaquettes, rectification des disques",
-    },
-    {
-      title: "Correction de peinture",
-      description: "Suppression des rayures, retouches peinture, traitement céramique",
-    },
-    {
-      title: "Suspension",
-      description: "Remplacement des amortisseurs, services d’alignement",
-    },
-    {
-      title: "Inspection avant achat",
-      description: "Inspection complète du véhicule avant achat",
-    },
-  ],
-
-  whyChoose: {
-    subtitle: "Excellence du service",
-    title: "Pourquoi choisir nos services ?",
-    description: "Nous nous engageons à offrir des services automobiles de la plus haute qualité avec transparence et professionnalisme.",
-    benefits: [
-      "Techniciens certifiés ASE avec plusieurs années d'expérience",
-      "Équipements et outils de diagnostic de pointe",
-      "Pièces de haute qualité OEM et aftermarket",
-      "Tarification transparente avec devis détaillés",
-      "Garantie sur toutes les pièces et la main-d'œuvre",
-      "Délais rapides sans compromettre la qualité",
-      "Service de navette et véhicules de prêt disponibles",
-      "Prise de rendez-vous en ligne et suivi du service",
-    ],
-  },
-
-  process: {
-    title: "Processus de service",
-    steps: [
+    mainServices: [
       {
-        number: "01",
-        title: "Prendre rendez-vous",
-        description: "Réservez en ligne ou appelez-nous pour planifier votre service",
+        title: "General Maintenance",
+        description: "Regular maintenance services including oil changes, fluid checks, filter replacements, and preventive inspections to keep your vehicle running smoothly.",
+        image: "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBtYWludGVuYW5jZSUyMG1lY2hhbmljJTIwd29ya3Nob3B8ZW58MXx8fHwxNzc0MTE1ODQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        number: "02",
-        title: "Déposer le véhicule",
-        description: "Amenez votre voiture à notre centre à l'heure qui vous convient",
+        title: "Computer Diagnostics",
+        description: "Advanced diagnostic services using state-of-the-art equipment to identify and resolve engine, transmission, and electrical system issues quickly and accurately.",
+        image: "https://images.unsplash.com/photo-1737493698550-085d3cf55445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXIlMjBzY2FubmVyfGVufDF8fHx8MTc3NDExNTg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        number: "03",
-        title: "Inspection & devis",
-        description: "Nous inspectons votre véhicule et fournissons un devis détaillé",
+        title: "Professional Detailing",
+        description: "Complete interior and exterior detailing services including washing, waxing, polishing, upholstery cleaning, and paint protection to restore your car's showroom shine.",
+        image: "https://images.unsplash.com/photo-1761934657948-708146148588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjYXIlMjBkZXRhaWxpbmclMjBjbGVhbmluZ3xlbnwxfHx8fDE3NzQxMTU4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        number: "04",
-        title: "Service & réparation",
-        description: "Nos experts réalisent les services approuvés",
+        title: "Tire Services",
+        description: "Complete tire care including new tire installation, rotation, balancing, alignment, and pressure checks. We carry all major tire brands.",
+        image: "https://images.unsplash.com/photo-1764015805414-df7de89d405b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJlJTIwd2hlZWwlMjBzZXJ2aWNlJTIwY2hhbmdlfGVufDF8fHx8MTc3NDExNTg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        number: "05",
-        title: "Contrôle qualité",
-        description: "Inspection complète pour garantir un résultat parfait",
+        title: "Battery Service",
+        description: "Battery testing, replacement, and electrical system diagnostics. We offer premium batteries with warranty and professional installation.",
+        image: "https://images.unsplash.com/photo-1767990495521-95cceb571125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBiYXR0ZXJ5JTIwZWxlY3RyaWNhbCUyMHNlcnZpY2V8ZW58MXx8fHwxNzc0MTE1ODQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        number: "06",
-        title: "Récupération",
-        description: "Récupérez votre véhicule et profitez de la conduite",
+        title: "AC & Heating",
+        description: "Climate control system repair and maintenance including AC recharge, heating system repair, and cabin filter replacement for optimal comfort.",
+      },
+      {
+        title: "Transmission Service",
+        description: "Transmission fluid changes, repairs, and complete rebuilds. Expert service for both automatic and manual transmissions.",
+      },
+      {
+        title: "Engine Repair",
+        description: "Complete engine diagnostics and repair services from minor tune-ups to major overhauls. We handle all makes and models.",
       },
     ],
-  },
 
-  pricing: {
-    title: "Tarification transparente",
-    description: "Nous croyons en une tarification honnête et claire. Chaque service comprend un devis détaillé avant le début des travaux. Pas de frais cachés, pas de surprises. Nous vous informons toujours avant tout travail supplémentaire.",
-    features: [
-      { label: "Gratuit", sublabel: "Devis" },
-      { label: "12 mois", sublabel: "Garantie main-d'œuvre" },
-      { label: "24/7", sublabel: "Service d'urgence" },
+    additionalServices: [
+      {
+        title: "Brake Service",
+        description: "Brake inspection, pad replacement, rotor resurfacing",
+      },
+      {
+        title: "Paint Correction",
+        description: "Scratch removal, paint touch-ups, ceramic coating",
+      },
+      {
+        title: "Suspension Work",
+        description: "Shock and strut replacement, alignment services",
+      },
+      {
+        title: "Pre-Purchase Inspection",
+        description: "Comprehensive vehicle inspection before buying",
+      },
     ],
-  },
 
-  cta: {
-    title: "Prêt à entretenir votre véhicule ?",
-    description: "Prenez rendez-vous dès aujourd'hui et découvrez un service automobile professionnel qui dépasse vos attentes.",
-    buttonText: "Réserver maintenant",
-    buttonLink: "/contact",
+    whyChoose: {
+      subtitle: "Service Excellence",
+      title: "Why Choose Our Services?",
+      description: "We're committed to delivering the highest quality automotive services with transparency and care.",
+      benefits: [
+        "Certified ASE technicians with years of experience",
+        "State-of-the-art diagnostic equipment and tools",
+        "High-quality OEM and aftermarket parts",
+        "Transparent pricing with detailed estimates",
+        "Warranty on all parts and labor",
+        "Fast turnaround times without compromising quality",
+        "Shuttle service and loaner vehicles available",
+        "Online appointment scheduling and service tracking",
+      ],
+    },
+
+    process: {
+      title: "Service Process",
+      steps: [
+        {
+          number: "01",
+          title: "Book Appointment",
+          description: "Schedule online or call us to book your service",
+        },
+        {
+          number: "02",
+          title: "Drop Off Vehicle",
+          description: "Bring your car to our facility at your time",
+        },
+        {
+          number: "03",
+          title: "Inspection & Estimate",
+          description: "We inspect your vehicle and provide a detailed estimate",
+        },
+        {
+          number: "04",
+          title: "Service & Repair",
+          description: "Our experts perform the approved services",
+        },
+        {
+          number: "05",
+          title: "Quality Check",
+          description: "Thorough inspection to ensure everything is perfect",
+        },
+        {
+          number: "06",
+          title: "Pick Up",
+          description: "Collect your vehicle and enjoy the ride",
+        },
+      ],
+    },
+
+    pricing: {
+      title: "Transparent Pricing",
+      description: "We believe in honest, upfront pricing. Every service includes a detailed estimate before we begin work. No hidden fees, no surprises. We'll always communicate with you about any additional work needed and get your approval first.",
+      features: [
+        { label: "Free", sublabel: "Estimates" },
+        { label: "12 Months", sublabel: "Labor Warranty" },
+        { label: "24/7", sublabel: "Emergency Service" },
+      ],
+    },
+
+    cta: {
+      title: "Ready to Service Your Vehicle?",
+      description: "Book your appointment today and experience professional automotive care that exceeds expectations.",
+      buttonText: "Schedule Service Now",
+      buttonLink: "/contact",
+    },
   },
-},
 
   // ========================================
   // CONTACT PAGE
   // ========================================
-contact: {
-  hero: {
-    subtitle: "Contactez-nous",
-    title: "Entrer en contact",
-    description: "Vous avez des questions ou souhaitez réserver un service ? Nous sommes là pour vous aider. Contactez-nous et nous vous répondrons dès que possible.",
-  },
-
-  info: [
-    {
-      type: "phone",
-      title: "Téléphone",
-      details: "06 64 25 61 60",
-      subdetails: "Lun-Ven : 8h - 18h",
+  contact: {
+    hero: {
+      subtitle: "Contact Us",
+      title: "Get in Touch",
+      description: "Have questions or ready to book your service? We're here to help. Reach out to us and we'll get back to you as soon as possible.",
     },
-    {
-      type: "email",
-      title: "Email",
-      details: "info@autopro.com",
-      subdetails: "Nous répondons sous 24 heures",
-    },
-    {
-      type: "address",
-      title: "Adresse",
-      details: "123 Auto Street",
-      subdetails: "Car City, CC 12345",
-    },
-    {
-      type: "hours",
-      title: "Horaires",
-      details: "Lun-Ven : 8h - 18h",
-      subdetails: "Sam : 9h - 16h, Dim : Fermé",
-    },
-  ],
 
-  form: {
-    title: "Envoyez-nous un message",
-    successMessage: "Merci ! Nous vous répondrons bientôt.",
-    fields: {
-      name: { label: "Nom complet", placeholder: "John Doe", required: true },
-      email: { label: "Email", placeholder: "john@example.com", required: true },
-      phone: { label: "Téléphone", placeholder: "(555) 123-4567", required: false },
-      service: {
-        label: "Service souhaité",
-        placeholder: "Sélectionnez un service",
-        required: false,
-        options: [
-          { value: "", label: "Sélectionnez un service" },
-          { value: "maintenance", label: "Entretien général" },
-          { value: "diagnostics", label: "Diagnostic informatique" },
-          { value: "detailing", label: "Nettoyage automobile" },
-          { value: "tires", label: "Service des pneus" },
-          { value: "battery", label: "Service batterie" },
-          { value: "ac", label: "Climatisation & chauffage" },
-          { value: "transmission", label: "Service de transmission" },
-          { value: "engine", label: "Réparation moteur" },
-          { value: "other", label: "Autre" },
-        ],
-      },
-      message: {
-        label: "Message",
-        placeholder: "Parlez-nous de votre véhicule et du service dont vous avez besoin...",
-        required: true,
-      },
-    },
-    submitButton: "Envoyer le message",
-    submittingButton: "Envoi en cours...",
-  },
-
-  businessHours: {
-    title: "Heures d'ouverture",
-    schedule: [
-      { days: "Lundi - Vendredi", hours: "8:00 - 18:00" },
-      { days: "Samedi", hours: "9:00 - 16:00" },
-      { days: "Dimanche", hours: "Fermé" },
-    ],
-  },
-
-  emergency: {
-    title: "Service d'urgence 24/7",
-    description: "Pour une assistance routière urgente, appelez notre ligne d'urgence au (555) 999-8888",
-  },
-
-  visitInfo: {
-    title: "Visitez notre centre",
-    description: "Passez dans notre centre moderne pour une visite ou pour discuter avec notre équipe. Nous disposons d'un espace d'attente confortable avec Wi-Fi gratuit et rafraîchissements.",
-  },
-
-  faq: {
-    subtitle: "FAQ",
-    title: "Questions fréquentes",
-    items: [
+    info: [
       {
-        question: "Ai-je besoin d'un rendez-vous ?",
-        answer: "Les visites sans rendez-vous sont acceptées, mais nous recommandons de réserver afin de réduire le temps d'attente et garantir la disponibilité du technicien adapté.",
+        type: "phone",
+        title: "Phone",
+        details: "(555) 123-4567",
+        subdetails: "Mon-Fri: 8AM - 6PM",
       },
       {
-        question: "Quels moyens de paiement acceptez-vous ?",
-        answer: "Nous acceptons toutes les principales cartes bancaires, les cartes de débit, les espèces et les chèques. Nous proposons également des options de financement pour les réparations importantes.",
+        type: "email",
+        title: "Email",
+        details: "info@autopro.com",
+        subdetails: "We'll respond within 24 hours",
       },
       {
-        question: "Proposez-vous des garanties ?",
-        answer: "Oui ! Nous offrons une garantie de 12 mois / 12 000 miles sur la main-d'œuvre, ainsi qu'une garantie sur les pièces selon les spécifications du fabricant.",
+        type: "address",
+        title: "Address",
+        details: "123 Auto Street",
+        subdetails: "Car City, CC 12345",
       },
       {
-        question: "Combien de temps prendra le service ?",
-        answer: "La durée dépend du type de service. Nous vous donnerons une estimation lors du dépôt du véhicule. Pour les travaux longs, nous proposons des véhicules de prêt.",
+        type: "hours",
+        title: "Hours",
+        details: "Mon-Fri: 8AM - 6PM",
+        subdetails: "Sat: 9AM - 4PM, Sun: Closed",
       },
     ],
+
+    form: {
+      title: "Send us a Message",
+      successMessage: "Thank you! We'll get back to you soon.",
+      fields: {
+        name: { label: "Full Name", placeholder: "John Doe", required: true },
+        email: { label: "Email", placeholder: "john@example.com", required: true },
+        phone: { label: "Phone", placeholder: "(555) 123-4567", required: false },
+        service: {
+          label: "Service Interested In",
+          placeholder: "Select a service",
+          required: false,
+          options: [
+            { value: "", label: "Select a service" },
+            { value: "maintenance", label: "General Maintenance" },
+            { value: "diagnostics", label: "Computer Diagnostics" },
+            { value: "detailing", label: "Auto Detailing" },
+            { value: "tires", label: "Tire Service" },
+            { value: "battery", label: "Battery Service" },
+            { value: "ac", label: "AC & Heating" },
+            { value: "transmission", label: "Transmission Service" },
+            { value: "engine", label: "Engine Repair" },
+            { value: "other", label: "Other" },
+          ],
+        },
+        message: {
+          label: "Message",
+          placeholder: "Tell us about your vehicle and what service you need...",
+          required: true,
+        },
+      },
+      submitButton: "Send Message",
+      submittingButton: "Sending...",
+    },
+
+    businessHours: {
+      title: "Business Hours",
+      schedule: [
+        { days: "Monday - Friday", hours: "8:00 AM - 6:00 PM" },
+        { days: "Saturday", hours: "9:00 AM - 4:00 PM" },
+        { days: "Sunday", hours: "Closed" },
+      ],
+    },
+
+    emergency: {
+      title: "24/7 Emergency Service",
+      description: "For urgent roadside assistance, call our emergency line at (555) 999-8888",
+    },
+
+    visitInfo: {
+      title: "Visit Our Facility",
+      description: "Stop by our modern facility for a tour or to speak with our team. We have a comfortable waiting area with complimentary WiFi and refreshments.",
+    },
+
+    faq: {
+      subtitle: "FAQ",
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          question: "Do I need an appointment?",
+          answer: "While walk-ins are welcome, we recommend scheduling an appointment to minimize wait times and ensure we have the right technician available for your needs.",
+        },
+        {
+          question: "What forms of payment do you accept?",
+          answer: "We accept all major credit cards, debit cards, cash, and checks. We also offer financing options for larger repairs.",
+        },
+        {
+          question: "Do you offer warranties?",
+          answer: "Yes! We provide a 12-month/12,000-mile warranty on labor and parts warranty based on manufacturer specifications.",
+        },
+        {
+          question: "How long will my service take?",
+          answer: "Service times vary depending on the work needed. We'll provide an estimated completion time when you drop off your vehicle. For longer jobs, we offer loaner vehicles.",
+        },
+      ],
+    },
   },
-},
 
   // ========================================
   // FOOTER
   // ========================================
-footer: {
-  company: {
-    name: "Salum",
-    tagline: "SERVICES",
-    description: "Votre partenaire de confiance pour les services professionnels d'entretien et de maintenance automobile.",
-  },
+  footer: {
+    company: {
+      name: "AutoPro",
+      tagline: "SERVICES",
+      description: "Your trusted partner for professional automotive care and maintenance services.",
+    },
 
-  quickLinks: {
-    title: "Liens rapides",
-    links: [
-      { name: "Accueil", path: "/" },
-      { name: "À propos", path: "/about" },
-      { name: "Services", path: "/services" },
-      { name: "Contact", path: "/contact" },
-    ],
-  },
+    quickLinks: {
+      title: "Quick Links",
+      links: [
+        { name: "Home", path: "/" },
+        { name: "About Us", path: "/about" },
+        { name: "Services", path: "/services" },
+        { name: "Contact", path: "/contact" },
+      ],
+    },
 
-  services: {
-    title: "Nos services",
-    items: [
-      "Entretien automobile",
-      "Diagnostic",
-      "Réparation automobile",
-      "Nettoyage",
-      "Service des pneus",
-    ],
-  },
+    services: {
+      title: "Our Services",
+      items: [
+        "Car Maintenance",
+        "Diagnostics",
+        "Auto Repair",
+        "Detailing",
+        "Tire Service",
+      ],
+    },
 
-  contact: {
-    title: "Contactez-nous",
-    address: "123 Auto Street, Car City, CC 12345",
-    phone: "+212 6 64 25 61 60",
-    email: "info@salum.com",
-  },
+    contact: {
+      title: "Contact Us",
+      address: "123 Auto Street, Car City, CC 12345",
+      phone: "(555) 123-4567",
+      email: "info@autopro.com",
+    },
 
-  social: {
-    facebook: "https://www.facebook.com/profile.php?id=61572279195123&rdid=IMVeiqpfG6iJ5rvE&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GGzJcdUpX%2F#",
-    instagram: "https://www.instagram.com/autosalum?igsh=MXM0MzhjaHQwZTcyaA%3D%3D",
-    twitter: "https://api.whatsapp.com/send/?phone=212664256160&text&type=phone_number&app_absent=0",
-  },
+    social: {
+      facebook: "#",
+      instagram: "#",
+      twitter: "#",
+    },
 
-  legal: {
-    copyright: "Salum Services. Tous droits réservés.",
-    links: [
-      { name: "Politique de confidentialité", url: "#" },
-      { name: "Conditions d'utilisation", url: "#" },
-    ],
+    legal: {
+      copyright: "AutoPro Services. All rights reserved.",
+      links: [
+        { name: "Privacy Policy", url: "#" },
+        { name: "Terms of Service", url: "#" },
+      ],
+    },
   },
-}
 };
