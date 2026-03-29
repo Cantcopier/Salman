@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import {
   Facebook,
   Instagram,
-  Twitter,
   Mail,
   Phone,
   MapPin,
@@ -53,7 +52,7 @@ export function Footer() {
                 className="bg-zinc-800 p-2.5 rounded-lg text-zinc-400 hover:bg-red-600 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5" />
+                <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
